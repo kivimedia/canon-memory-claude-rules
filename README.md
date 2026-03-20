@@ -22,9 +22,9 @@ Claude Code is powerful but has predictable failure friction points:
 
 ## The Philosophy
 
-Other frameworks solve these problems with **prescriptive scaffolding** - 54KB of prompts telling Claude exactly how to debug (5-phase protocol), how to manage sessions (phrase-triggered flush), how to route models (tier tables), and how to organize memory (3-layer architecture).
+Other frameworks solve these problems with **prescriptive scaffolding** - 54KB of prompts telling Claude exactly how to debug (5-phase protocol), how to manage sessions (phrase-triggered flush), how to route models (tier tables), and how to organize memory (3-layer architecture). While these work and improve Clauding experience, they come at a price of getting used to manual phases, and they fight what Claude is naturally - a really smart coding solution.
 
-We take the opposite approach: **guardrails, not prescriptions.**
+We take the opposite approach: **Memory centric guardrails, not prescriptions.**
 
 Claude (especially Opus) already knows how to debug, write code, plan, and verify. It doesn't need a 5-phase debugging protocol. It needs a rule that says *"don't claim done without proof."*
 
@@ -33,9 +33,9 @@ The difference:
 | Approach | Philosophy | Size | Maintenance |
 |---|---|---|---|
 | Prescriptive | Tell Claude HOW to work | 54KB+ | High - rules drift, conflict, need updates |
-| **Guardrail** | Tell Claude what NOT to skip | ~4KB | Low - rules are stable, model-agnostic |
+| **Memory Guardrails** | Tell Claude what NOT to skip | ~4KB | Low - rules are stable, model-agnostic |
 
-Prescriptive rules fight the model. Guardrails work *with* it.
+Prescriptive rules fight the model and are often ignored! Memory Guardrails work *with* it.
 
 ---
 
