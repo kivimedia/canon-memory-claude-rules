@@ -1,21 +1,21 @@
 # Canon Memory Claude Rules
 
-**6 rules. No scaffolding. Claude already knows how to code - it just needs guardrails.**
+**6 rules. No scaffolding. Claude already knows how to code - it just needs memory guardrails.**
 
-Drop 6 small markdown files into `~/.claude/rules/` and Claude Code becomes an AI that verifies before claiming done, saves plans to disk, catches its own gaps, stops after 3 failed fixes, learns from experience, and remembers your preferences forever.
+Drop 6 small markdown files into `~/.claude/rules/` and Claude Code becomes an AI that verifies and proves fixes before claiming done, saves plans to disk, catches its own gaps, switches to planning after 3 failed fixes, learns and evolves from experience, and remembers your preferences forever.
 
-Total size: ~4KB. No dependencies. No config. No lock-in.
+Total size: ~4KB. No dependencies. No config. No lock-in. Zero risks of injections or other security hazards.
 
 ---
 
 ## The Problem
 
-Claude Code is powerful but has predictable failure modes:
+Claude Code is powerful but has predictable failure friction points:
 
 | Failure Mode | What Happens | How Often |
 |---|---|---|
-| **False completion** | "I've updated the component, it should work now." (It doesn't.) | Every session |
-| **Plan drift** | Plans exist only in chat. Mid-implementation, steps get skipped. You ask "did you do X?" three times. | Most multi-step tasks |
+| **False completion** | "I've fixed the component, it should work now." (It doesn't.) | Every session |
+| **Plan drift** | Plans exist only in chat. Mid-implementation, steps get skipped. You ask "compare the code to the plan?" there are still gaps for three times. | Most multi-step tasks |
 | **No learning loop** | Same CSS gotcha, same deploy mistake, same API quirk - rediscovered every session | Across sessions |
 | **Infinite patching** | Fix fails, tries a variation, fails again, tries another variation... 8 attempts later, same dead end | Complex bugs |
 | **Forgotten preferences** | You said "never use white on gray" last week. This week, white on gray. | Across sessions |
