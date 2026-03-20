@@ -1,0 +1,31 @@
+# Example CLAUDE.md
+
+This is an example of how your project's CLAUDE.md integrates with Canon Memory Claude Rules.
+The rules live in `~/.claude/rules/` and are always active. Your CLAUDE.md handles project-specific context.
+
+---
+
+## Project Info
+
+- **Stack**: Next.js 14, TypeScript, Tailwind CSS, Supabase
+- **Live URL**: https://your-app.vercel.app
+- **Repo**: github.com/your-org/your-project
+
+## Coding Guidelines
+
+- Use Tailwind utility classes, no custom CSS files
+- All API routes go in `src/app/api/`
+- Use React Query for client-side data fetching
+- **Workflow rules**: See `~/.claude/rules/` for verification, plan discipline, debugging, experience evolution, and coding preference rules.
+
+## Deploy
+
+- Auto-deploys via Vercel on push to `main`
+- Run `npm run build` before pushing
+- Environment variables are in `.env.local` (not committed)
+
+## Key Decisions
+
+- Using Supabase Auth with PKCE flow
+- Row Level Security enabled on all tables
+- Images stored in Supabase Storage, served via CDN
